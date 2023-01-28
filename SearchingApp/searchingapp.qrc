@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/SearchingApp">
+        <file>down.png</file>
+        <file>up.png</file>
+        <file>down-white.png</file>
+        <file>up-white.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>down.png</file>
+        <file>down-white.png</file>
+        <file>up.png</file>
+        <file>up-white.png</file>
+        <file>SearchingApp.ico</file>
+        <file>search.ico</file>
+    </qresource>
+</RCC>

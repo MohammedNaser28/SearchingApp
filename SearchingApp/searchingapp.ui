@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SearchingApp</class>
+ <widget class="QMainWindow" name="SearchingApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>703</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SearchingApp</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#2B4865;</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:#0A2647;
+</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>341</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;
+color:#fff;</string>
+    </property>
+    <property name="title">
+     <string>Kind Search</string>
+    </property>
+    <widget class="QRadioButton" name="customeSearch">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string>Custome Search</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="fullSearch">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>89</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;
+</string>
+     </property>
+     <property name="text">
+      <string>Full Search</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="inputPath">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;
+background-color:#fff;
+color:#205295;
+    border-style: solid;
+    border-radius: 12;
+    padding: 3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the path</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>298</y>
+      <width>341</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;
+color:#fff;</string>
+    </property>
+    <property name="title">
+     <string>About Search</string>
+    </property>
+    <widget class="QRadioButton" name="nameSearch">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string>Search with Name</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="extSearch">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string>Search with extension</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="bothSearch">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff
+</string>
+     </property>
+     <property name="text">
+      <string>Search with Both</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="nameInput">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>311</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#fff;
+color:#205295;
+    border-style: solid;
+    border-radius:12;
+    padding: 3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter the name</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>530</y>
+      <width>331</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QPushButton:pressed{
+border:none;
+background-color:#144272;
+padding:5px;
+color:#2B4865;
+
+}
+
+
+QPushButton
+{
+color:#eeeeee;
+
+background-color:#144272;
+
+    border-width: 1px;
+    border-color: #144272;
+    border-style: solid;
+    border-radius: 6;
+    padding: 3px;
+    font-size: 14px;
+font-weight:600;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #8FE3CF, stop: 1 #8FE3CF);
+}
+QPushButton:focus
+{
+border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #8FE3CF, stop: 1 #8FE3CF);
+}</string>
+    </property>
+    <property name="text">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>301</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#144272;
+color:white;
+border:none
+
+</string>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#fff;
+border:none;</string>
+    </property>
+    <property name="title">
+     <string>Search algorithm</string>
+    </property>
+    <widget class="QCheckBox" name="mathSearch">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>108</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string>Search Matching</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="approxSearch">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#fff;</string>
+     </property>
+     <property name="text">
+      <string>Search Approxamitly</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>36</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QSpinBox {
+    font-size: 12pt;
+font.pixelSize:height
+}
+
+QSpinBox:up-button {
+
+border:none;
+image:url(:/icons/up-white.png);
+
+width:12px;
+height:12px;
+}
+
+QSpinBox:down-button {
+border:none;
+image:url(:/icons/down-white.png);
+width:12px;
+height:12px;
+}
+
+
+QSpinBox:down-button::pressed {
+image:url(:/icons/down.png);
+background-color:#ced4da;
+}
+
+QSpinBox:up-button::pressed {
+image:url(:/icons/up.png);
+background-color:#ced4da;
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>71</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>max distance</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="searchingapp.qrc"/>
+ </resources>
+ <connections/>
+</ui>
