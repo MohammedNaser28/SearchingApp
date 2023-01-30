@@ -1,24 +1,11 @@
 #pragma once
-//levenshtein_distance
 #define NOMINMAX
-
+#include "stdafx.h"
 #include <QtWidgets/QMainWindow>
 #include "./ui_searchingapp.h"
-#include <boost/filesystem.hpp>
-#include <QString>
-#include <QLocale>
-#include <QChar>
-#include <boost/algorithm/string.hpp>
-#include <boost/algorithm/string/predicate.hpp>
-#include <boost/range/combine.hpp>
-#include <boost/filesystem.hpp>
-#include <cmath>
-#include <QAbstractListModel>
-#include <QApplication>
-#include <QVariant>
-#include <cstring>
-#include <QStandardPaths>
-#include <Windows.h>
+#include "helperfunction.h"
+#include "worker.h"
+
 
 
 using namespace std;
@@ -37,27 +24,15 @@ public:
 private:
     Ui::SearchingApp *ui;
 
+
 private slots:
     void Search();
     void aboutSearch();
     void kindSearch();
     void spinBox();
-    bool isArabic(const QString& fileName);
 
-
-    QVector<QString> getAllLogicalDrive();
-
-
-    string removeSpaces(string str);
-
-
-    string fromQstoS(QString str);
-
-    QString fromStoQs(string str);
-    QVector<QString> get_by_ext(const QString& ext, const QString& root);
-    QVector<QString> find_file_approx( QString& search_term, int max_distance,  QString& root_path);
-    QVector<QString> find_file_mathcing(const QString& search_term, const QString& path);
-    int levenshtein_distance( const string& str1, const  string& str2);
+    void updateResults(QVector<QString> results);
+ 
 };
 
 

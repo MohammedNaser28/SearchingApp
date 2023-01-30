@@ -1,1 +1,17 @@
 #include <QtWidgets>
+#include <boost/filesystem.hpp>
+#include <QString>
+#include <QLocale>
+#include <QChar>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/predicate.hpp>
+#include <boost/range/combine.hpp>
+#include <boost/filesystem.hpp>
+#include <cmath>
+#include <QAbstractListModel>
+#include <QApplication>
+#include <QVariant>
+#include <cstring>
+#include <QStandardPaths>
+#include <Windows.h>
+#include <QThread>
