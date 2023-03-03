@@ -48,9 +48,7 @@ void worker::doSearch()
     else if (ui->nameSearch->isChecked()) {
         if (ui->mathSearch->isChecked()) {
             results = find_file_mathcing(NameFile, path);
-            QMessageBox messageBox;
-            messageBox.critical(0, "Error", "An error has occured !");
-            messageBox.setFixedSize(500, 200);
+
 
         }
         else if (ui->approxSearch->isChecked()) {
@@ -66,11 +64,7 @@ void worker::doSearch()
             results.append(pathesNameFileApprox);
         }
     }
-    else {
-        QMessageBox messageBox;
-        messageBox.critical(0, "Error", "An error has occured !");
-        messageBox.setFixedSize(500, 200);
-    }
+
     emit finished();
     emit resultsReady(results);
 

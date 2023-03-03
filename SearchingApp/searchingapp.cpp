@@ -17,9 +17,12 @@ SearchingApp::SearchingApp(QWidget* parent)
 {
     ui->setupUi(this);
 
+
+    ui->mathSearch->setChecked(true);
     ui->customeSearch->setChecked(true);
     ui->nameSearch->setChecked(true);
     ui->inputPath->setPlaceholderText(desktopPath);
+    ui->nameInput->setPlaceholderText("Enter the Name of The file");
 
     ui->spinBox->setEnabled(false);
     ui->spinBox->setStyleSheet("background-color:#567189;color:#fff;");
@@ -41,83 +44,12 @@ SearchingApp::~SearchingApp()
 }
 
 void SearchingApp::Search() {
-    ///* Declaration for Important Variables */
-    //QString path = ui->inputPath->toPlainText();
-    //QString NameFile = ui->nameInput->toPlainText();
-    //int max_distance = ui->spinBox->value();
-    //QVector<QString> results;
 
-    //if (ui->bothSearch->isChecked()) {
-    //    if (ui->mathSearch->isChecked()) {
-    //        QVector<QString> pathesNameFile = find_file_mathcing(NameFile,path);
-    //        QVector<QString> pathesExtFile = get_by_ext(NameFile, path);
-    //        results = pathesNameFile;
-    //        results.append(pathesExtFile);
-    //    }
-    //    else if (ui->approxSearch->isChecked()) {
-
-    //        QVector<QString> pathesNameFile = find_file_approx(NameFile, max_distance ,path);
-    //        QVector<QString> pathesExtFile = get_by_ext(NameFile, path);
-
-    //        results = pathesNameFile;
-    //        results.append(pathesExtFile);
-    //    }
-    //    else if (ui->mathSearch->isChecked() && ui->approxSearch->isChecked())
-    //    {
-    //        QVector<QString> pathesNameFileMatch = find_file_mathcing(NameFile, path);
-    //        QVector<QString> pathesExtFileMatch = get_by_ext(NameFile, path);
-    //        QVector<QString> pathesNameFileApprox = find_file_approx(NameFile, max_distance, path);
-    //        QVector<QString> pathesExtFileApprox = get_by_ext(NameFile, path);
-    //         results = pathesNameFileMatch;
-    //        results.append(pathesNameFileApprox);
-    //        results.append(pathesExtFileMatch);
-    //        results.append(pathesExtFileApprox);
-    //    }
-    //}
-    //else if (ui->extSearch->isChecked()) {
-    //        
-    //        results = get_by_ext(NameFile, path);
-
-    //}
-    //else if (ui->nameSearch->isChecked()){
-    //    if (ui->mathSearch->isChecked()) {
-    //        results = find_file_mathcing(NameFile, path);
-    //        QMessageBox messageBox;
-    //        messageBox.critical(0, "Error", "An error has occured !");
-    //        messageBox.setFixedSize(500, 200);
-
-    //    }
-    //    else if (ui->approxSearch->isChecked()) {
-   
-    //        results = find_file_approx(NameFile, max_distance, path);
-
-    //    }
-    //    else if (ui->mathSearch->isChecked() && ui->approxSearch->isChecked())
-    //    {
-    //        QVector<QString> pathesNameFileMatch = find_file_mathcing(NameFile, path);
-    //        QVector<QString> pathesNameFileApprox = find_file_approx(NameFile, max_distance, path);
-    //        results = pathesNameFileMatch;
-    //        results.append(pathesNameFileApprox);
-    //    }
-    //}
-    //else {
-    //    QMessageBox messageBox;
-    //    messageBox.critical(0, "Error", "An error has occured !");
-    //    messageBox.setFixedSize(500, 200);
-    //}
-
-    //if (results.isEmpty())
-    //    results.append("No Thing Found");
-
-    //MyModel* model = new MyModel(results);
-    //ui->listView->setSpacing(3);
-    //ui->listView->setModel(model);
-    //ui->listView->show();
-        /* Declaration for Important Variables */
     QString path = ui->inputPath->toPlainText();
     QString NameFile = ui->nameInput->toPlainText();
     int max_distance = ui->spinBox->value();
 
+    
     // Start the search in a separate thread
     QThread* thread = new QThread();
     worker* work = new worker(path, NameFile, max_distance, ui);
@@ -186,7 +118,7 @@ void SearchingApp::kindSearch()
         ui->nameInput->setPlaceholderText("Enter  the extension with dot in first.");
     }
     else if (ui->nameSearch->isChecked()) {
-        ui->nameInput->setPlaceholderText("Enter Name of the file");
+        ui->nameInput->setPlaceholderText("Enter the Name of The file");
     }
 }
 

@@ -17,7 +17,6 @@ public slots:
 signals:
     void finished();
 
-signals:
     void resultsReady(QVector<QString> results);
 
 private:
